@@ -8,6 +8,11 @@ public class EmpresaBancaria {
 
 	static ArrayList<Conta> contasBancarias;
 
+	/**
+	 * 
+	 * @param args
+	 */
+
 	public static void main(String[] args) {
 		contasBancarias = new ArrayList<Conta>();
 		operacoes();
@@ -36,7 +41,10 @@ public class EmpresaBancaria {
 		case 4:
 			transferir();
 			break;
-
+			
+			/**
+			 * ListarContas/Extrato de transferencias
+			 */
 		case 5:
 			listarContas();
 			break;
@@ -72,6 +80,12 @@ public class EmpresaBancaria {
 
 	}
 
+	/**
+	 * 
+	 * @param numeroConta
+	 * @return
+	 */
+
 	private static Conta encontrarConta(int numeroConta) {
 		Conta conta = null;
 		if (contasBancarias.size() > 0) {
@@ -97,7 +111,7 @@ public class EmpresaBancaria {
 
 		} else {
 
-			JOptionPane.showInputDialog("--- Conta não encontrada ---");
+			JOptionPane.showInputDialog(" Conta não encontrada ");
 
 		}
 
@@ -125,6 +139,7 @@ public class EmpresaBancaria {
 	}
 
 	public static void transferir() {
+
 		int numeroContaRemetente = Integer.parseInt(JOptionPane.showInputDialog("Número da conta do remetente:"));
 
 		Conta contaRemetente = encontrarConta(numeroContaRemetente);

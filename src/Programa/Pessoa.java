@@ -2,6 +2,10 @@ package Programa;
 
 import java.util.Date;
 
+/**
+ * @author Matheus Queiroz
+ */
+
 public class Pessoa {
 
 	private static int counter = 1;
@@ -15,6 +19,12 @@ public class Pessoa {
 	public Pessoa() {
 	}
 
+	/**
+	 * 
+	 * @param nome
+	 * @param cpf
+	 * @param celular
+	 */
 	public Pessoa(String nome, String cpf, String celular) {
 		this.numeroPessoa = Pessoa.counter;
 		this.nome = nome;
@@ -24,6 +34,11 @@ public class Pessoa {
 		Pessoa.counter += 1;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
+
 	public int getNumeroPessoa() {
 		return this.numeroPessoa;
 	}
@@ -32,25 +47,55 @@ public class Pessoa {
 		return nome;
 	}
 
+	/**
+	 * 
+	 * @param nome
+	 */
+
 	public void setName(String nome) {
 		this.nome = nome;
 	}
+
+	/**
+	 * 
+	 * @return
+	 */
 
 	public String getCpf() {
 		return cpf;
 	}
 
+	/**
+	 * 
+	 * @param cpf
+	 */
+
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
+	/**
+	 * 
+	 * @return
+	 */
 
 	public String getCelular() {
 		return celular;
 	}
 
+	/**
+	 * 
+	 * @param celular
+	 */
+
 	public void setEmail(String celular) {
 		this.celular = celular;
 	}
+
+	/**
+	 * 
+	 * @return
+	 */
 
 	public Date getAccountCreationDate() {
 		return this.accountCreationDate;

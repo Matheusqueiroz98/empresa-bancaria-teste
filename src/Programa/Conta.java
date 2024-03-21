@@ -13,6 +13,11 @@ public class Conta {
 	private Double saldo = 0.0;
 	private Double taxa = 10.0;
 
+	/**
+	 * 
+	 * @param pessoa
+	 */
+
 	public Conta(Pessoa pessoa) {
 		this.numeroConta = Conta.accountCounter;
 		this.pessoa = pessoa;
@@ -20,6 +25,10 @@ public class Conta {
 		Conta.accountCounter += 1;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 
 	public int getNumeroConta() {
 		return numeroConta;
@@ -29,21 +38,46 @@ public class Conta {
 		return pessoa;
 	}
 
+	/**
+	 * 
+	 * @param pessoa
+	 */
+
 	public void setClient(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
+
+	/**
+	 * 
+	 * @return
+	 */
 
 	public Double getSaldo() {
 		return saldo;
 	}
 
+	/**
+	 * 
+	 * @param saldo
+	 */
+
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
+
 	public Double getTaxa() {
 		return taxa;
 	}
+
+	/**
+	 * 
+	 * @param taxa
+	 */
 
 	public void setTaxa(Double taxa) {
 		this.taxa = taxa;
@@ -59,6 +93,11 @@ public class Conta {
 				+ this.pessoa.getCelular() + "\nSaldo: " + Utils.doubleToString(this.getSaldo()) + "\nTaxa: "
 				+ Utils.doubleToString(this.getTaxa()) + "\n";
 	}
+
+	/**
+	 * 
+	 * @param valor
+	 */
 
 	public void depositar(Double valor) {
 		if (valor > 0) {
@@ -80,6 +119,12 @@ public class Conta {
 		}
 	}
 
+	/**
+	 * 
+	 * @param contaParaDeposito
+	 * @param valor
+	 */
+
 	public void transferencia(Conta contaParaDeposito, Double valor) {
 		if (valor > 0 && this.getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);
@@ -91,6 +136,11 @@ public class Conta {
 		}
 
 	}
+
+	/**
+	 * 
+	 * @param taxa
+	 */
 
 	public void taxas(Double taxa) {
 		if (taxa > 0 && this.getTaxa() >= taxa) {

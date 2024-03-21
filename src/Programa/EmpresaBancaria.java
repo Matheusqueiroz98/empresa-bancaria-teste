@@ -89,7 +89,7 @@ public class EmpresaBancaria {
 	private static Conta encontrarConta(int numeroConta) {
 		Conta conta = null;
 		if (contasBancarias.size() > 0) {
-			for (Conta contaa : contasBancarias) {
+			for (Conta contaa: contasBancarias) {
 				if (contaa.getNumeroConta() == numeroConta) {
 					conta = contaa;
 				}

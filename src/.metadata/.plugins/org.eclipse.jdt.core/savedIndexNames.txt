@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\Teste-works\Projeto\EmpresaBancaria\src\.metadata\.plugins\org.eclipse.jdt.core

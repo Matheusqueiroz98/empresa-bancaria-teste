@@ -22,7 +22,7 @@ public class EmpresaBancaria {
 
 		int operacao = Integer.parseInt(JOptionPane.showInputDialog(" Selecione uma operaração: "
 				+ "|   Opção 1 - Criar conta   " + "|   Opção 2 - Depositar     " + "|   Opção 3 - Sacar   "
-				+ "|   Opção 4 - Transferir    " + "|   Opção 5 - Extrato de transfêrencias       "
+				+ "|   Opção 4 - Transferir    " + "|   Opção 5 - Extrato bancário "
 				+ "|   Opção 6 - Extrato das taxas       " + "|   Opção 7 - Sair          "));
 
 		switch (operacao) {
